@@ -1,0 +1,3 @@
+class TherapistsController < ApplicationController
+
+end
