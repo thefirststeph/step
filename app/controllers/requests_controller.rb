@@ -31,7 +31,9 @@ class RequestsController < ApplicationController
       @ce_list = CE_LIST
       @cc_list = CC_LIST
       @one_to_ten = ONE_TO_TEN
-      render "new"
+      # add fake result for presentation
+      redirect_to '/search'
+      # render "new"
     end
   end
 
