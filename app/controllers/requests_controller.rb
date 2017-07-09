@@ -27,7 +27,7 @@ class RequestsController < ApplicationController
 
 	def update
 		@request = Request.find(params[:id])
-		if @request.update
+		if @request.update(request_params)
 			redirect_to @request
 		else
 			@errors = @request.errors.full_messages
