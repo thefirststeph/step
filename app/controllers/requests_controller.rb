@@ -1,4 +1,5 @@
 class RequestsController < ApplicationController
+	include SearchHelper
 	def index
 		@requests = Request.all
 	end
@@ -8,6 +9,11 @@ class RequestsController < ApplicationController
 	end
 
 	def new
+			@i_list = ["hi"]
+			@cl_list = CL_LIST
+			@ce_list = CE_LIST
+			@cc_list = CC_LIST
+			@one_to_ten = ONE_TO_TEN
 		@request = Request.new
 	end
 
