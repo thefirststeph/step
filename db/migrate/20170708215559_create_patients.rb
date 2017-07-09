@@ -9,6 +9,7 @@ class CreatePatients < ActiveRecord::Migration[5.1]
       t.string :language
       t.references :organization
       t.string :notes
+      t.string :location
 
       t.timestamps
     end

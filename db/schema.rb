@@ -67,6 +67,7 @@ ActiveRecord::Schema.define(version: 20170709060725) do
     t.string "language"
     t.bigint "organization_id"
     t.string "notes"
+    t.string "location"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["organization_id"], name: "index_patients_on_organization_id"
