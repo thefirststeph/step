@@ -14,7 +14,10 @@ class RequestsController < ApplicationController
 	def create
 		@request = Request.new(request_params)
 		if @request.save
-			redirect_to @request
+			session[:request_id] = @request.id
+			redirect_to '/search'
+			# redirect_to @request
+			# we're not redirecting to the request anymore
 		else
 			@errors = @request.errors.full_messages
 			render "new"

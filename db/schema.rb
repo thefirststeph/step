@@ -85,6 +85,14 @@ ActiveRecord::Schema.define(version: 20170709060725) do
     t.datetime "time"
     t.string "location"
     t.text "notes"
+    t.string "issue_param"
+    t.string "client_language_param"
+    t.string "client_category_param"
+    t.string "client_ethnicity_param"
+    t.integer "ti_value"
+    t.integer "cl_value"
+    t.integer "cc_value"
+    t.integer "ce_value"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["organization_id"], name: "index_requests_on_organization_id"
