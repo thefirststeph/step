@@ -3,8 +3,8 @@
 	<p class="padding-left text-gray no-top-margin"><%= @organization.location %></p>	
 </div>
 
-<div class="block right padding-top">
-	<%= button_to "New Patient", new_organization_patient_path(@organization), :class => "btn-lrg" %>
+<div class="block right padding-top padding-right">
+	<%= button_to "New Patient", new_organization_patient_path(@organization), :class => "btn-lrg", method: "get" %>
 </div>
 
 <% if @organization.image_url? %>
@@ -14,7 +14,7 @@
 
 
 
-<h2>Patients(<%= @organization.patients.length %>)</h2>
+<p class="text-gray">Patients(<%= @organization.patients.length %>)</p class="text-gray">
 <%= render @organization.patients %>
 
 <h2>Open Requests</h2>
