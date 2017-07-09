@@ -1,4 +1,10 @@
 <%= form_for @request do |f| %>
+  <%= f.hidden_field :patient_id, value: patient.id %>
+  <p>
+    <%= f.label :patient_id %>
+    <%= f.collection_select :patient_id, organization.patients, :name %>
+  </p>
+  
   <p> 
     <%= f.label :location %><br>
     <%= f.text_field :location %>
@@ -15,7 +21,6 @@
   </p>
 
   <%= f.hidden_field :organization_id, value: organization.id %>
-  <%= f.hidden_field :patient_id, value: patient.id %>
 
   <%= f.button :submit %>
 <% end %>
