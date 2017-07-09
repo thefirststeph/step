@@ -7,3 +7,9 @@
 <p>Phone: <%= @organization.phone %></p>
 <p>Email: <%= @organization.email %></p>
 <p>Notes: <%= @organization.notes %></p>
+
+<h2>Patients(<%= @organization.patients.length %>)</h2>
+
+<%= render @organization.patients %>
+
+<%= link_to "New Patient", new_organization_patient_path(@organization) %>

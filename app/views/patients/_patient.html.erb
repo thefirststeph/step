@@ -1,0 +1,7 @@
+<p><%= link_to patient.full_name, organization_patient_path(patient) %></p>
+<p>Issues:</p>
+<ul>
+	<% patient.issues.each do |issue| %>
+		<li>issue.name</li>
+	<% end %>
+</ul>

@@ -34,6 +34,7 @@ ActiveRecord::Schema.define(version: 20170708221418) do
   create_table "issues", force: :cascade do |t|
     t.string "issuable_type"
     t.bigint "issuable_id"
+    t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["issuable_type", "issuable_id"], name: "index_issues_on_issuable_type_and_issuable_id"
