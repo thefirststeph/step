@@ -17,6 +17,7 @@
 /* Add a black background color to the top navigation */
 body {
 	font-family: Muli;
+	font-size: 14px;
 }
 
 .topnav {
@@ -69,5 +70,29 @@ h1 {
 	font-size: 26px;
 	color: #444848;
 	font-weight: 300;
-	padding: 10px;
+	padding: 18px 60px;
+}
+
+h2 {
+	font-size: 20px;
+}
+
+.text-gray {
+	color: #838383;
+}
+
+.text-blue {
+	color: #0078d7;
+}
+
+.text-darkgray {
+	color: #444848;
+}
+
+.text-white {
+	color: white;
+}
+
+.text-green {
+	color: #55d18d;
 }

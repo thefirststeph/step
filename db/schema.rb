@@ -46,6 +46,7 @@ ActiveRecord::Schema.define(version: 20170709060725) do
     t.string "username"
     t.string "password_digest"
     t.string "image_url"
+    t.string "location"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
