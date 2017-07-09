@@ -1,5 +1,7 @@
 <%= form_for @request do |f| %>
 
+  Patient ID:
+
   <p> 
     <%= f.label :location %><br>
     <%= f.text_field :location %>
@@ -14,20 +16,21 @@
     <%= f.label :notes %><br>
     <%= f.text_area :notes %>
   </p>
+
   <%= f.label :issue_param %>
   <%= f.select :issue_param, ['option1', 'option2']%>
-  <%= f.select :desired_attribute, ['option1', 'option2']%>
+  <%= f.select :ti_value, ['option1', 'option2']%>
   <%= f.label :client_language_param %>
   <%= f.select :client_language_param, ['option1', 'option2']%>
-  <%= f.select :desired_attribute, ['option1', 'option2']%>
+  <%= f.select :cl_value, ['option1', 'option2']%>
   <%= f.label :client_category_param %>
   <%= f.select :client_category_param, ['option1', 'option2']%>
-  <%= f.select :desired_attribute, ['option1', 'option2']%>
+  <%= f.select :cc_value, ['option1', 'option2']%>
   <%= f.label :client_ethnicity_param %>
   <%= f.select :client_ethnicity_param, ['option1', 'option2']%>
-  <%= f.select :desired_attribute, ['option1', 'option2']%>
+  <%= f.select :ce_value, ['option1', 'option2']%>
 
-  <%= f.hidden_field :organization_id, value: organization.id %>
+
 
   <%= f.button :submit %>
 <% end %>
