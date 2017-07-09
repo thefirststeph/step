@@ -9,6 +9,7 @@ class PatientsController < ApplicationController
 
 	def new
 		@patient = Patient.new
+		@organization = Organization.find(params[:organization_id])
 	end
 
 	def create
