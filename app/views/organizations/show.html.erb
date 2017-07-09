@@ -1,17 +1,26 @@
-<h1><%= "#{@organization.name}'s Page" %></h1> 
+<div class="block left">
+	<h1 class="padding-left"><%= "#{@organization.name}'s Page" %></h1> 
+	<p class="padding-left text-gray no-top-margin"><%= @organization.location %></p>	
+</div>
+
+<div class="block right padding-top">
+	<%= button_to "New Patient", new_organization_patient_path(@organization), :class => "btn-lrg" %>
+</div>
 
 <% if @organization.image_url? %>
-	<%= image_tag(@organization.image_url) %>
+	<p class="text-center"><%= image_tag(@organization.image_url, :class => "text-center") %></p>
+	
 <% end %>
 
-<p>Phone: <%= @organization.phone %></p>
-<p>Email: <%= @organization.email %></p>
-<p>Notes: <%= @organization.notes %></p>
+
+
+<h2>Patients(<%= @organization.patients.length %>)</h2>
+<%= render @organization.patients %>
 
 <h2>Open Requests</h2>
 <%= render @organization.requests %>
 <%= link_to "New Request", new_request_path %>
 
-<h2>Patients(<%= @organization.patients.length %>)</h2>
-<%= render @organization.patients %>
-<%= link_to "New Patient", new_organization_patient_path(@organization) %>
+<p>Phone: <%= @organization.phone %></p>
+<p>Email: <%= @organization.email %></p>
+<p>Notes: <%= @organization.notes %></p>

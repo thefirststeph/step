@@ -1,7 +1,12 @@
-<p><%= link_to patient.full_name, organization_patient_path(patient) %></p>
-<p>Issues:</p>
-<ul>
-	<% patient.issues.each do |issue| %>
-		<li><%= issue.name %></li>
-	<% end %>
-</ul>
+<div class="card">
+	<p><%= link_to patient.full_name, organization_patient_path(patient) %></p>
+	<p>Issues:</p>
+		<% patient.issues.each do |issue| %>
+			<% if patient.issues.last == issue %>
+				<p><%= issue.name %></p>
+			<% else %>
+				<p><%= issue.name %>, </p>
+			<% end %>
+		<% end %>
+	</ul>
+</div>

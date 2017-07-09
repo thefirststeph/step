@@ -70,11 +70,28 @@ h1 {
 	font-size: 26px;
 	color: #444848;
 	font-weight: 300;
-	padding: 18px 60px;
+	padding-top: 18px;
+	margin-bottom: 0;
 }
 
 h2 {
 	font-size: 20px;
+}
+
+.padding-left {
+	padding-left: 60px;
+}
+
+.padding-top {
+	padding-top: 18px;
+}
+
+.no-top-margin {
+	margin: 0;
+}
+
+.text-center {
+	text-align: center;
 }
 
 .text-gray {
@@ -95,4 +112,37 @@ h2 {
 
 .text-green {
 	color: #55d18d;
+}
+
+.btn-lrg {
+	width: 180px;
+	height: 48px;
+	border-radius: 100px;
+	background-color: #3ea1f0;
+	color: white;
+	font-size: 14px;
+	border: none;
+}
+
+.btn-sml {
+	width: 91px;
+	height: 25px;
+	border-radius: 100px;
+	background-color: #55d18d;
+	font-size: 12px;
+	color: white;
+	border: none;
+	text-decoration: none;
+}
+
+.left {
+	float: left;
+}
+
+.right {
+	float: right;
+}
+
+.block {
+	display: block;
 }
