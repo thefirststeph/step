@@ -1,6 +1,6 @@
 class SearchesController < ApplicationController
-	def show
-		
+	def show		
+# THIS IS THE REAL SOLUTION
 		request = Request.find(session[:request_id])
 		i_key = request.issue_param 
 		i_value = request.ti_value
@@ -11,7 +11,6 @@ class SearchesController < ApplicationController
 		ce_key = request.client_ethnicity_param
 		ce_value = request.ce_value
 
-
 		base_url = "https://stepfat.herokuapp.com/search"
 
 		base_url += (i_key + i_value.to_s) if i_key
@@ -19,7 +18,10 @@ class SearchesController < ApplicationController
 		base_url += (cc_key + cc_value.to_s) if cc_key
 		base_url += (ce_key + ce_value.to_s) if ce_key
 		@response = HTTParty.get(base_url)
-		
+
+# JUST USE THE HACK SOLUTION BY UNCOMMENTING LINES 23 ON IF NECESSARY
+# ===================================================================
+
 # 		@response = {
 #     "data": [
 #         {
