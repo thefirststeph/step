@@ -1,4 +1,6 @@
 class SearchesController < ApplicationController
+	include SearchHelper
+	
 	def show		
 # THIS IS THE REAL SOLUTION
 		request = Request.find(session[:request_id])
