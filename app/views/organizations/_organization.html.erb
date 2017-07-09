@@ -1,9 +1,7 @@
 <% if organization.image_url? %>
 	<%= image_tag(organization.image_url) %>
 <% end %>
-<p>Organization Name: <%= organization.name %></p>
-<p>Phone: <%= organization.phone %></p>
-<p>Email: <%= organization.email %></p>
-<p>Notes: <%= organization.notes %></p>
+
+<p><%= link_to organization.name, organization %></p>
 
 <hr>
