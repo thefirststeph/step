@@ -1,7 +1,13 @@
 class Issue < ApplicationRecord
 
-	belongs_to :issuable, polymorphic: true
+	has_many :patient_issues
+	has_many :therapist_issues
+	has_many :request_issues
 
-	validates_presence_of :issuable_type, :issuable_id
+	has_many :patients, through: :patient_issues
+	has_many :therapists, through: :therapist_issues
+	has_many :requests, through: :request_issues
+
+	validates_presence_of :name
 
 end

@@ -36,3 +36,9 @@ for i in 0..4 do
 		language: lang[i],
 		notes: "Some notes about patient")
 end
+
+Issue.create(name: "Depression")
+Issue.create(name: "Anxiety")
+Issue.create(name: "Sexual Assault")
+Issue.create(name: "Domestic Violence")
+Issue.create(name: "Health")
