@@ -151,6 +151,10 @@ h2 {
 	float: right;
 }
 
+.bottom {
+	vertical-align: bottom;
+}
+
 .block {
 	display: block;
 }
@@ -162,4 +166,6 @@ h2 {
 	background-color: #ffffff;
 	border: solid 1px #e6e6e6;
 	margin: 9px;
+	padding: 20px;
+	display: inline-block;
 }

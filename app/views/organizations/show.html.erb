@@ -13,12 +13,16 @@
 <% end %>
 
 
-
-<p class="text-gray">Patients(<%= @organization.patients.length %>)</p class="text-gray">
-<%= render @organization.patients %>
+<div class="padding-left">
+	<p class="text-gray">Patients(<%= @organization.patients.length %>)</p class="text-gray">
+	<%= render @organization.patients %>
+</div>
 
 <h2>Open Requests</h2>
-<%= render @organization.requests %>
+<div class="padding-left">
+	<%= render @organization.requests %>
+</div>
+
 <%= link_to "New Request", new_request_path %>
 
 <p>Phone: <%= @organization.phone %></p>
