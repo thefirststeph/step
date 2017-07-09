@@ -9,7 +9,7 @@ class RequestsController < ApplicationController
 	end
 
 	def new
-			@i_list = ["hi"]
+			@i_list = I_LIST
 			@cl_list = CL_LIST
 			@ce_list = CE_LIST
 			@cc_list = CC_LIST
