@@ -42,7 +42,8 @@ for i in 0..4 do
 		organization_id: org[i],
 		zip_code: 94607,
 		language: lang[i],
-		notes: "Some notes about patient")
+		notes: "Some notes about patient",
+		location: "San Francisco, CA")
 		num = i + 1
 		PatientIssue.create(patient_id: num, issue_id: num)
 end

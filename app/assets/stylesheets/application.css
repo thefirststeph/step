@@ -82,6 +82,10 @@ h2 {
 	padding-left: 60px;
 }
 
+.padding-right {
+	padding-right: 60px;
+}
+
 .padding-top {
 	padding-top: 18px;
 }
@@ -114,6 +118,10 @@ h2 {
 	color: #55d18d;
 }
 
+.no-dec {
+	text-decoration: none;
+}
+
 .btn-lrg {
 	width: 180px;
 	height: 48px;
@@ -143,6 +151,21 @@ h2 {
 	float: right;
 }
 
+.bottom {
+	vertical-align: bottom;
+}
+
 .block {
 	display: block;
+}
+
+.card {
+	width: 376px;
+	height: 195px;
+	border-radius: 8px;
+	background-color: #ffffff;
+	border: solid 1px #e6e6e6;
+	margin: 9px;
+	padding: 20px;
+	display: inline-block;
 }
