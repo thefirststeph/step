@@ -3,6 +3,8 @@ class SearchesController < ApplicationController
 	end
 
 	def create
+		
+		redirect_to 'searches#show'
 	end
 	
 	def show
