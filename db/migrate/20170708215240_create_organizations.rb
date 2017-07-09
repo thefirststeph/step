@@ -5,9 +5,10 @@ class CreateOrganizations < ActiveRecord::Migration[5.1]
       t.string :contact
       t.string :phone
       t.string :email
-      t.text :notes
+      t.text   :notes
       t.string :username
       t.string :password_digest
+      t.string :image_url
 
       t.timestamps
     end
