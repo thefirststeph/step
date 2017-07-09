@@ -10,10 +10,10 @@ class CreateRequests < ActiveRecord::Migration[5.1]
       t.string :client_language_param
       t.string :client_category_param
       t.string :client_ethnicity_param
-      t.int :ti_value
-      t.int :cl_value
-      t.int :cc_value
-      t.int :ce_value
+      t.integer :ti_value
+      t.integer :cl_value
+      t.integer :cc_value
+      t.integer :ce_value
       t.timestamps
     end
   end
