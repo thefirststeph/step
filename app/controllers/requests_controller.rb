@@ -15,6 +15,7 @@ class RequestsController < ApplicationController
       @cc_list = CC_LIST
       @one_to_ten = ONE_TO_TEN
     @request = Request.new
+    @patient = Patient.all.sample
   end
 
   def create

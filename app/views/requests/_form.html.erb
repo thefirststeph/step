@@ -1,27 +1,27 @@
 <%= form_for @request do |f| %>
-  <p>
-    <%= f.label "Post Title" %><br>
+  <h3>
+    <%= f.label "Post Title"%><br>
     <input type="text" placeholder="Enter a descriptive title">
-  </p>
+  </h3>
 
-  <p>
+  <h3>
     <%= f.label "Post Description" %><br>
     <input type="text" placeholder="Add a description">
-  </p>
+  </h3>
 
-  <p> 
+  <h3> 
     <%= f.label "Date Range" %><br>
     <%= f.date_field :time %>
-  </p>
+  </h3>
 
-  <p> 
+  <h3> 
     <%= f.label :notes %><br>
     <%= f.text_area :notes %>
-  </p>
+  </h3>
 
-  <p>
-  We want to find the best providers for Steph's specific needs. Please select where applicable:
-  </p>
+  <h3>
+  We want to find the best providers for <%=@patient.first_name.capitalize  %>'s specific needs. Please select where applicable:
+  </h3>
 
   <ul style="list-style:none;">
   <strong><%= f.label "Select search criteria"  %></strong>

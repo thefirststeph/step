@@ -2,6 +2,9 @@
 	<h1 class="padding-left text-white">
 		We found <%= @response[:data].length %> therapists that match your criteria!
 	</h1>
+
+	<%= button_to "CONTACT US", "/message", :class => "btn-lrg-white text-blue", method: "get" %>
+
 	<div class="padding-left">
 		<% @response[:data].each do |t| %>
 			<div class="card">
