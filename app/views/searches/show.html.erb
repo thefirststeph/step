@@ -6,4 +6,8 @@
 <li>Therapist 3</li>
 <li>Therapist 4</li>
 <li>Therapist 5</li>
-</ul>
+
+<% @response[:data].each do |t| %>
+<li><%= t[:name] %></li>
+<% end %>
+	</ul>
