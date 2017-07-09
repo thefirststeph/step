@@ -1,16 +1,48 @@
-<h1> Here's my show page </h1>
+<div class="page-blue">
+	<h1 class="padding-left text-white">
+		We found <%= @response[:data].length %> therapists that match your criteria!
+	</h1>
+	<div class="padding-left">
+		<% @response[:data].each do |t| %>
+			<div class="card">
+				<div class="block left full-width">		
+					<h2 class="text-blue"><%= t[:name] %></h2>
+					<p class="text-gray"><%= t[:title] %></p>
+					<hr>
+				</div>
 
-<ul>
-<li>Therapist 1</li>
-<li>Therapist 2</li>
-<li>Therapist 3</li>
-<li>Therapist 4</li>
-<li>Therapist 5</li>
+				<div class="block bottom left">
+					<p>Specialties</p>
+						<% if t[:target_issues].length > 0 %>
+							<% t[:target_issues].each do |issue| %>
+								<p class="text-blue no-top-margin">
+									<%= issue[:name] %>
+								</p>
+							<% end %>
+						<% else %>
+								<p class="text-blue no-top-margin">
+									<%= t[:issues].first[:name] %>
+								</p>
+						<% end %>
+				</div>
 
-<% @response[:data].each do |t| %>
-<li><%= t[:name] %></li>
-<li><%= t[:title] %></li>
-<li><%= t[:blurb] %></li>
-<% end %>
-
-</ul>
+				<div class="block bottom right">
+					<p class="text-gray">Languages</p>
+					<p class="text-darkgray">
+						<% if t[:client_languages].length > 0 %>
+							<% t[:client_languages].each do |lang| %>
+								<% if t[:client_languages].last == lang %>
+									<%= lang[:name] %>
+								<% else %>
+									<%= lang[:name] %>, 
+								<% end %>
+							<% end %>
+						<% else %>
+							<%= "English" %>
+						<% end %>
+					</p>
+				</div>
+			</div>
+		<% end %>
+	</div>
+</div>
