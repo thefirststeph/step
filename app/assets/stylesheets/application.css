@@ -15,13 +15,17 @@
  */
 
 /* Add a black background color to the top navigation */
+body {
+	font-family: Muli;
+}
+
 .topnav {
-    background-color: #3EA1F0;
-    position: fixed;
-    top: 0;
-    padding: 0;
-    width: 100%;
-    margin-left: -8px; 
+  background-color: #3EA1F0;
+  position: fixed;
+  top: 0;
+  padding: 0;
+  width: 100%;
+  margin-left: -8px; 
 }
 
 .links {
@@ -29,14 +33,13 @@
 	float: right;
   color: #f2f2f2;
   text-align: center;
-  padding: 0 16px;
+  padding: 15px 8px;
   text-decoration: none;
   font-size: 17px;
-  padding-top: 13px;
 }
 
 /* Change the color of links on hover */
-.topnav a:hover {
+.topnav .links:hover {
     background-color: #ddd;
     color: black;
 }
@@ -56,4 +59,15 @@
 	padding: 5px;
 	padding-left: 15px;
 	display: block;
+}
+
+.container {
+	margin-top: 51px;
+}
+
+h1 {
+	font-size: 26px;
+	color: #444848;
+	font-weight: 300;
+	padding: 10px;
 }

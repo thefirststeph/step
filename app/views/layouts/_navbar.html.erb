@@ -1,6 +1,11 @@
 <div class="topnav" id="myTopnav">
-  <a href="#"><%= image_tag("chat.svg", :class => "icon") %></a> 
-  <a href="#news" class="links">News</a>
-  <a href="#contact" class="links">Contact</a>
-  <a href="#about" class="links">About</a>
+  <a href="#"><%= image_tag("chat.svg", :class => "icon") %></a>
+  <% if current_user %>
+  	<p class="links">Signed in as <%= current_user.username %></p>
+  	<a href="/logout" class="links">Logout</a>
+	<% else %>
+		<a href="/login" class="links">Login</a>
+		<%= link_to 'Therapist Sign Up', new_therapist_path, :class => "links" %>
+		<%= link_to 'Org Sign Up', new_organization_path, :class => "links" %>
+	<% end %>
 </div>
