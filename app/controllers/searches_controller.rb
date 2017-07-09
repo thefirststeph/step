@@ -22,7 +22,7 @@ class SearchesController < ApplicationController
         base_url += (ce_key + ce_value.to_s) if ce_key.length > 0
         @response = HTTParty.get(base_url)
     rescue
-# JUST USE THE HACK SOLUTION BY UNCOMMENTING LINES 23 ON IF NECESSARY
+# JUST USE THE HACK SOLUTION BY UNCOMMENTING LINES 23 ON IF necessary
 # ===================================================================
 
         @response = {
