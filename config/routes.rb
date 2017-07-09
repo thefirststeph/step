@@ -2,6 +2,10 @@ Rails.application.routes.draw do
 
 	root to:"pages#home"
 
+	get '/login' => 'sessions#new'
+  post '/login' => 'sessions#create'
+  get '/logout' => 'sessions#destroy'
+
   resources :requests
   resources :patients, only: [:index]
   resources :organizations do
