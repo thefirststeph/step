@@ -16,4 +16,7 @@ Rails.application.routes.draw do
   	resources :bookings, only: [:show, :new, :create, :edit, :update, :destroy]
   end
 
+  get '/search' => 'searches#new'
+  post '/search' => 'searches#create'
+  get '/search-result' => 'searches#show'
 end
