@@ -8,8 +8,10 @@
 <p>Email: <%= @organization.email %></p>
 <p>Notes: <%= @organization.notes %></p>
 
+<h2>Open Requests</h2>
+<%= render @organization.requests %>
+<%= link_to "New Request", new_request_path %>
+
 <h2>Patients(<%= @organization.patients.length %>)</h2>
-
 <%= render @organization.patients %>
-
 <%= link_to "New Patient", new_organization_patient_path(@organization) %>
