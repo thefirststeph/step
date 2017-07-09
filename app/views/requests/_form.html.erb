@@ -17,20 +17,18 @@
     <%= f.text_area :notes %>
   </p>
 
-  <% one_to_ten =* (1..10)  %>
-  <% one_to_ten.map!{|t| t.to_s } %>
   <%= f.label :issue_param %>
-  <%= f.select :issue_param, ['option1', 'option2']%>
-  <%= f.select :ti_value, one_to_ten%>
+  <%= f.select :issue_param, @i_list, prompt: "Select Issue" %>
+  <%= f.select :ti_value, @one_to_ten %>
   <%= f.label :client_language_param %>
-  <%= f.select :client_language_param, ['option1', 'option2']%>
-  <%= f.select :cl_value, one_to_ten%>
+  <%= f.select :client_language_param, @cl_list,  prompt: "Select Language"%>
+  <%= f.select :cl_value, @one_to_ten%>
   <%= f.label :client_category_param %>
-  <%= f.select :client_category_param, ['option1', 'option2']%>
-  <%= f.select :cc_value, one_to_ten%>
+  <%= f.select :client_category_param, @cc_list, prompt: "Select Category" %>
+  <%= f.select :cc_value, @one_to_ten%>
   <%= f.label :client_ethnicity_param %>
-  <%= f.select :client_ethnicity_param, ['option1', 'option2']%>
-  <%= f.select :ce_value, one_to_ten%>
+  <%= f.select :client_ethnicity_param, @ce_list, prompt: "Select Ethnicity"%>
+  <%= f.select :ce_value, @one_to_ten%>
 
 
 
