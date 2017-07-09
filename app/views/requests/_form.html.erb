@@ -1,10 +1,7 @@
 <%= form_for @request do |f| %>
-  <%= f.hidden_field :patient_id, value: patient.id %>
-  <p>
-    <%= f.label :patient_id %>
-    <%= f.collection_select :patient_id, organization.patients, :name %>
-  </p>
-  
+
+  Patient ID:
+
   <p> 
     <%= f.label :location %><br>
     <%= f.text_field :location %>
@@ -20,7 +17,22 @@
     <%= f.text_area :notes %>
   </p>
 
-  <%= f.hidden_field :organization_id, value: organization.id %>
+  <% one_to_ten =* (1..10)  %>
+  <% one_to_ten.map!{|t| t.to_s } %>
+  <%= f.label :issue_param %>
+  <%= f.select :issue_param, ['option1', 'option2']%>
+  <%= f.select :ti_value, one_to_ten%>
+  <%= f.label :client_language_param %>
+  <%= f.select :client_language_param, ['option1', 'option2']%>
+  <%= f.select :cl_value, one_to_ten%>
+  <%= f.label :client_category_param %>
+  <%= f.select :client_category_param, ['option1', 'option2']%>
+  <%= f.select :cc_value, one_to_ten%>
+  <%= f.label :client_ethnicity_param %>
+  <%= f.select :client_ethnicity_param, ['option1', 'option2']%>
+  <%= f.select :ce_value, one_to_ten%>
+
+
 
   <%= f.button :submit %>
 <% end %>
