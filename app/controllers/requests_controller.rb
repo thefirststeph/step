@@ -26,6 +26,11 @@ class RequestsController < ApplicationController
       # we're not redirecting to the request anymore
     else
       @errors = @request.errors.full_messages
+      @i_list = I_LIST
+      @cl_list = CL_LIST
+      @ce_list = CE_LIST
+      @cc_list = CC_LIST
+      @one_to_ten = ONE_TO_TEN
       render "new"
     end
   end
