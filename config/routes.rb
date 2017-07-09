@@ -17,4 +17,5 @@ Rails.application.routes.draw do
   end
 
   get '/search' => 'searches#show'
+  get '/message' => 'pages#message'
 end
